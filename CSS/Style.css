@@ -1,0 +1,436 @@
+
+:root {
+    --color_primario: #000000fd;
+    --color_primario_suave: #00000083;
+    --color_blanco: #fff;
+    --altura_header: 80px;
+    --padding_left_right: 2rem;
+    --ancho_maximo: 1200px;
+    --colorlogo: #F81010;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    transition: .2s linear;
+}
+
+/*banner*/
+
+img{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+ol,ul{
+    list-style: none;
+}
+.header {
+    height: var(--altura_header);
+    background-color: var(--color_primario); 
+    background-image: url();
+}
+.navbar {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 var(--padding_left_right);
+}
+.menu_hamburguesa{
+    display: none;
+}
+.menu_hamburguesa:checked + .ul_links {
+    height: calc(100vh - var(--altura_header));
+}
+.logo {
+    color: var(--colorlogo);
+    font-family: "Racing Sans One", sans-serif ;
+    font-size: 40px;
+}
+
+
+.list_icon {
+    color: var(--color_blanco);
+    cursor: pointer;
+}
+.ul_links {
+    width: 100%;
+    background-color: var(--color_primario_suave);
+    position: absolute;
+    top: var(--altura_header);
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    /* height: calc(100vh - var(--altura_header)); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+ 
+    transition: all .3s;
+}
+
+.link {
+    font-size: 3em;
+    color: var(--color_blanco);
+    font-weight: bold;
+}
+
+/*diseño responsive*/
+@media (min-width:768px){
+
+    .labe_hamburguesa {
+        display: none;
+    }
+    .ul_links{
+        position: static;
+        width: auto;
+        height: auto;           
+        flex-direction: row;
+        gap: 2rem;
+    }
+    .link{
+        font-size: 1.2rem;
+        padding: .2rem .7rem;
+        font-family: sans-serif;
+    }
+    .link:hover{
+        background-color: #f32727;
+        
+    }
+
+    .container2{
+        padding: 20px;
+    }
+
+ 
+}
+
+
+/*NOSOTROS*/
+
+.container{
+    
+}
+.section_2{
+    width: 75%;
+    margin: auto;
+    padding: 100px 0;
+
+}
+#section_2-title{
+    font-family:"Racing Sans One", sans-serif;
+    font-size: 40px;
+    color: var(--color_primario);
+}
+.us{
+  display: flex;
+}
+.us-text{
+    width: 60%;
+    padding: 0 10% 0 0;
+}
+.us-paragraph{
+   font-family:"roboto", sans-serif;
+    font-size: 18px;
+    color: var(--color_primario);
+    text-align: justify-all;
+}
+.paragraph-text{
+  margin: 20px 0;
+}
+
+.us-rs{
+  margin:20px 0;
+
+}
+.us-rs-title{
+    font-family:"Racing Sans One", sans-serif;
+    font-size:20px;
+    color: var(--colorlogo);
+
+}
+.rs-icon{
+    margin:20px 0;
+
+}
+.us-img{
+    width: 60%;
+
+}
+.img-img{
+ object-fit: cover;
+ width: 100%;
+
+
+}
+
+ /*EJERCICIOS*/
+
+
+ .container2{
+
+    background: linear-gradient(45deg, red,black);
+    padding: 15px 9px;
+    padding-bottom: 100px;
+ }
+
+#section_3-title{
+    text-align: center;
+    padding-bottom: 15px;
+    color: var(--color_primario);
+    font-size: 50px;
+    font-family:"Racing Sans One", sans-serif;
+}
+
+.box-container{
+    display: grid ;
+    grid-template-columns:repeat(auto-fit, minmax(270px, 1fr));
+    gap:15px;
+
+}
+.box{
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 1.0);
+    border-radius: 5px;
+    background:#FFFFFF ;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.box img{
+ 
+ height: 80px;
+}
+ h3{
+    color: var(--color_primario);
+    font-size: 22px;
+    padding: 10px 0;
+
+}
+
+.box p{
+  color: #777;
+  font-size: 15px;
+  line-height: 1.8;
+  text-align: justify;
+}
+.btn{
+    margin-top: 10px;
+    display: inline-block;
+    background:#FF0B0B ;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 8px 20px;
+
+}
+.btn:hover{
+    letter-spacing: 5px;
+}
+.box:hover{
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 1.0);
+    transform:scale(1.03);
+
+
+}
+
+/*NUTRICION*/
+
+
+.container{
+    margin: auto;
+}
+.section_4{
+    width: 75%;
+    margin: auto;
+    padding: 100px 0;
+
+}
+#section_4-title{
+    font-family:"Racing Sans One", sans-serif;
+    font-size: 7VMIN;
+    color: var(--color_primario);
+  
+}
+
+.dieta{
+  display: flex;
+}
+
+.text{
+width: 60%;
+padding: 0 10% 0 0;
+}
+
+.text p{
+    font-size: 18px;
+    color: var(--color_primario);
+    text-align: justify;
+    margin: 20px 0;
+}
+
+.button{
+    
+    display:block;
+    width: 155px;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 15px 30px;
+    margin: 30px 100px;
+    text-decoration: none;
+    color: var(--color_blanco);
+    background-color:var(--colorlogo) ;
+
+}
+
+.button:hover{
+    background-color: transparent;
+    border: 2px solid rgba(0, 0, 0, 1.0);
+    color: #0C0202;
+}
+  
+.image-gallery{
+   
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items:center ;
+    
+}
+ 
+.dietaimg{
+    max-width: 250px;
+    margin: 10px;
+}
+
+
+/*salud*/
+
+.container-5{
+    width: 100%;
+    height: 100%;
+    background-color: var(--color_primario);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    color: var(--color_blanco);
+    margin: auto;
+
+}
+
+.container-5_img{
+    width: 35%;
+    margin-right:90px;
+
+}
+.container-5_text{
+   width: 35%;
+
+}
+
+#section_5-title{
+   font-size: 48px;
+   margin: 40px 0;
+   font-family:"Racing Sans One", sans-serif;
+
+
+  
+}
+
+.container-5 p{
+    font-size: 18px;
+    color: var(--color_blanco);
+    text-align: justify;
+
+
+}
+
+.container-5 a{
+    display: flex;
+    width: 155px;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 15px 30px;
+    margin: 30px 0;
+    text-decoration: none;
+    color: var(--color_blanco);
+    background-color:var(--colorlogo) ;
+
+}
+
+.container-5 a:hover{
+    background-color: transparent;
+    border: 2px solid #FFFFFF;
+    color:#FFFFFF;
+}
+  
+
+  /*footer*/
+
+  footer{
+    width: 100%;
+    bottom: 0;
+    left:0;
+    padding: 2rem 8%;
+    background-color: #FFFFFF; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+  .logo2{
+    width: 200px;
+    height: 100px;
+    margin-bottom: 1rem;
+
+  }
+  
+
+.social-icon-container, .footer-menu-container{
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+
+}
+
+.footer-menu-container{
+    list-style-type: none ;
+    color:var(--color_primario);
+    font-size: 18px;
+
+
+}
+.menu-item{
+    margin: 1rem 1.5rem;
+    cursor:pointer;
+    opacity: 0.6;
+}
+
+.menu-item:hover{ 
+    opacity:1;
+
+}
+
+.copyright{
+    color: var(--color_primario);
+    opacity: 0.3;
+    text-align: center;
+
+
+
+}
